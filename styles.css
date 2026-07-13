@@ -7,6 +7,8 @@
   --line: rgba(22, 28, 45, 0.12);
   --accent: #635bff;
   --accent-soft: rgba(99, 91, 255, 0.1);
+  --button-bg: #574ee3;
+  --button-text: #fff;
   --shadow: 0 24px 70px rgba(40, 43, 70, 0.1);
 }
 
@@ -19,6 +21,8 @@
     --line: rgba(255, 255, 255, 0.11);
     --accent: #9b95ff;
     --accent-soft: rgba(155, 149, 255, 0.13);
+    --button-bg: #aaa5ff;
+    --button-text: #111218;
     --shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
   }
 }
@@ -38,6 +42,20 @@ body {
 
 a { color: var(--accent); }
 a:hover { text-decoration-thickness: 2px; }
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  padding: 9px 13px;
+  border-radius: 8px;
+  background: var(--text);
+  color: var(--bg);
+  transform: translateY(-160%);
+}
+
+.skip-link:focus { transform: translateY(0); }
 
 .shell {
   width: min(900px, calc(100% - 32px));
@@ -128,8 +146,8 @@ code {
   margin-top: 10px;
   padding: 11px 16px;
   border-radius: 10px;
-  background: var(--accent);
-  color: #fff;
+  background: var(--button-bg);
+  color: var(--button-text);
   font-weight: 700;
   text-decoration: none;
 }
